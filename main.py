@@ -4,7 +4,7 @@ import mysql.connector
 app = Flask(__name__)
 app.secret_key = "super-secret-key"
 
-db = mysql.connector.connect(host='localhost', user='root', database='testing')
+db = mysql.connector.connect(host='localhost', user='root', password='root', database='testing')
 cursor = db.cursor()
 
 

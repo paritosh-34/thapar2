@@ -48,15 +48,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/category"> Events</a>
                                 </li>
-                                
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        <a class="dropdown-item" href="elements.html">elements</a>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout"> Logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -85,22 +78,22 @@
             <div class="row justify-content-between">
                 <div class="banner_post_1 banner_post_bg_1">
                     <div class="banner_post_iner text-center">
-                        <a href="category.html"><h5>{{ clubs[l][0] }}</h5></a> 
-                        <a href="single-blog.html"><h2>{{ posts[l][0] }}</h2></a> 
-                        <p>Posted on Febraury  2, 2020</p>
+                        <a href="#"><h5>Club</h5></a> 
+                        <a href="#"><h2>IEEE</h2></a> 
+                        <p>Founded on Febraury  2, 2020</p>
                     </div>
                 </div><div class="banner_post_1 banner_post_bg_2">
                     <div class="banner_post_iner text-center">
-                        <a href="category.html"><h5>{{ clubs[l - 1][0] }}</h5></a> 
-                        <a href="single-blog.html"><h2>{{ posts[l - 1][0] }}</h2></a> 
-                        <p>Posted on Febraury  2, 2020</p>
+                        <a href="#"><h5>Club</h5></a> 
+                        <a href="#"><h2>IEI</h2></a> 
+                        <p>Founded on Febraury  2, 2020</p>
                     </div>
                 </div>
                 <div class="banner_post_1 banner_post_bg_3">
                     <div class="banner_post_iner text-center">
-                        <a href="category.html"><h5>{{ clubs[l - 2][0] }}</h5></a> 
-                        <a href="single-blog.html"><h2>{{ posts[l - 2][0] }}</h2></a> 
-                        <p>Posted on Febraury  2, 2020</p>
+                        <a href="#"><h5>Club</h5></a> 
+                        <a href="#"><h2>ACM</h2></a> 
+                        <p>Founded on Febraury  2, 2020</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +104,7 @@
     <!-- subscribe form start-->
     
     <!-- subscribe form end-->
-
+    <h1> 3 upcomming events </h1>
     <!-- feature_post start-->
     <section class="all_post section_padding">
         <div class="container">
@@ -124,8 +117,8 @@
                                     <img src={{url_for('static', filename="img3/post/post_12.png")}} alt="">
                                 </div>
                                 <div class="single_post_text text-center">
-                                    <a href="category.html"><h5> Event</h5></a> 
-                                    <a href="single-blog.html"><h2>Upcoming Event </h2></a> 
+                                    <a href="#"><h5> {{ clubs[l][0] }}</h5></a> 
+                                    <a href="/singleblog/{{ posts[l][0] }}"><h2>{{ posts[l][0] }}</h2></a> 
                                     <p>Posted on Febraury  2, 2019</p>
                                 </div>
                             </div>
@@ -136,27 +129,26 @@
                                     <img src={{url_for('static', filename="img3/post/post_18.png")}} alt="">
                                 </div>
                                 <div class="single_post_text text-center">
-                                    <a href="category.html"><h5> Event</h5></a> 
-                                    <a href="single-blog.html"><h2>Upcoming Event</h2></a> 
+                                    <a href="#"><h5> {{ clubs[l-1][0]}}</h5></a> 
+                                    <a href="/singleblog/{{ posts[l-1][0] }}"><h2>{{ posts[l-1][0]}}</h2></a> 
                                     <p>Posted on Febraury  2, 2019</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
-                                <div class="single_post post_1">
-                                    <div class="single_post_img">
-                                        <img src={{url_for('static', filename="img3/post/post_19.png")}} alt="">
-                                    </div>
-                                    <div class="single_post_text text-center">
-                                        <a href="category.html"><h5> Event</h5></a> 
-                                        <a href="single-blog.html"><h2>Upcoming Event</h2></a> 
-                                        <p>Posted on Febraury  2, 2019</p>
-                                    </div>
+                            <div class="single_post post_1">
+                                <div class="single_post_img">
+                                    <img src={{url_for('static', filename="img3/post/post_19.png")}} alt="">
                                 </div>
+                                <div class="single_post_text text-center">
+                                    <a href="#"><h5> {{ clubs[l-2][0]}}</h5></a> 
+                                    <a href="/singleblog/{{ posts[l-2][0] }}"><h2>{{ posts[l-2][0]}}</h2></a> 
+                                    <p>Posted on Febraury  2, 2019</p>
+                                </div>
+                            </div>
                         </div>
-                        
                     </div>
-                    <div class="page_pageniation">
+                    <!-- <div class="page_pageniation">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item disabled">
@@ -170,7 +162,7 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-4">
                     <div class="sidebar_widget">
@@ -189,16 +181,16 @@
                             </div>
                             <div class="single_catagory_item category">
                                 <ul class="list-unstyled">
-                                    <li><a href="category.html">Culture</a> <span>(15)</span> </li>
-                                    <li><a href="category.html">Creative Design</a> <span>(15)</span> </li>
-                                    <li><a href="category.html">Illustration</a> <span>(15)</span> </li>
-                                    <li><a href="category.html">Production</a> <span>(15)</span> </li>
-                                    <li><a href="category.html">Mangement</a> <span>(15)</span> </li>
-                                    <li><a href="category.html">Branding</a> <span>(15)</span> </li>
+                                    <li><a href="#">Culture</a> <span>(15)</span> </li>
+                                    <li><a href="#">Creative Design</a> <span>(15)</span> </li>
+                                    <li><a href="#">Illustration</a> <span>(15)</span> </li>
+                                    <li><a href="#">Production</a> <span>(15)</span> </li>
+                                    <li><a href="#">Mangement</a> <span>(15)</span> </li>
+                                    <li><a href="#">Branding</a> <span>(15)</span> </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="single_sidebar_wiget">
+                        <!-- <div class="single_sidebar_wiget">
                             <div class="sidebar_tittle">
                                 <h3>Popular Feeds</h3>
                             </div>
@@ -207,7 +199,7 @@
                                     <img src={{url_for('static', filename="img3/sidebar/sidebar_1.png")}} alt="">
                                 </div>
                                 <div class="post_text_1 pr_30">
-                                    <a href="single-blog.html">
+                                    <a href="/singleblog">
                                         <h3>Subdue lesser beast winged
                                             bearing meat tree one</h3>
                                     </a>
@@ -219,7 +211,7 @@
                                 </div>
                                 <div class="post_text_1 pr_30">
                                     
-                                    <a href="single-blog.html">
+                                    <a href="/singleblog">
                                         <h3>Subdue lesser beast winged
                                             bearing meat tree one</h3>
                                     </a>
@@ -230,7 +222,7 @@
                                     <img src={{url_for('static', filename="img3/sidebar/sidebar_3.png")}} alt="">
                                 </div>
                                 <div class="post_text_1 pr_30">
-                                    <a href="single-blog.html">
+                                    <a href="/singleblog">
                                         <h3>Subdue lesser beast winged
                                             bearing meat tree one</h3>
                                     </a>
@@ -251,7 +243,7 @@
                                     <li><a href="#"><i class="ti-instagram"></i></a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

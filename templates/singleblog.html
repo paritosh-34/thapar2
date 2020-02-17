@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Event</title>
+    <link rel="icon" href={{url_for('static', filename="img3/favicon.png")}}>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href={{url_for('static', filename="css3/bootstrap.min.css")}}>
+    <!-- animate CSS -->
+    <link rel="stylesheet" href={{url_for('static', filename="css3/animate.css")}}>
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href={{url_for('static', filename="css3/owl.carousel.min.css")}}>
+    <!-- themify CSS -->
+    <link rel="stylesheet" href={{url_for('static', filename="css3/themify-icons.css")}}>
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href={{url_for('static', filename="css3/liner_icon.css")}}>
+    <link rel="stylesheet" href={{url_for('static', filename="css3/search.css")}}>
+    <!-- style CSS -->
+    <link rel="stylesheet" href={{url_for('static', filename="css3/style.css")}}>
+</head>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html"> <img src=""> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/main">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="archive.html">Societies</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"> Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout"> Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header_social_icon d-none d-lg-block">
+                            <ul>
+                                <li>
+                                    <div id="wrap">
+                                        <form action="#" autocomplete="on">
+                                            <input id="search" name="search" type="text" placeholder="Search here"><span class="ti-search"></span> 
+                                        </form>
+                                    </div>
+                                </li>
+                             
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg align-items-center">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-sm-6">
+                    <div class="breadcrumb_tittle text-left">
+                        <h2>Event Details</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="breadcrumb_content text-right">
+                        <p>Home<span>/</span>Event details</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+   <!--================Blog Area =================-->
+   <section class="blog_area single-post-area all_post section_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 posts-list">
+               <div class="single-post">
+                  <div class="feature-img">
+                     <img class="img-fluid" src={{url_for('static',filename="img3/blog/single_blog_1.png")}} alt="">
+                  </div>
+                  <div class="blog_details">
+                     <h2>{{ posts[0] }}
+                     </h2>
+                     <ul class="blog-info-link mt-3 mb-4">
+                        <li><a href="#"><i class="far fa-user"></i> Music</a></li>
+                     </ul>
+                     <p class="excert">
+                        {{ posts[5] }}
+                     </p>
+                     <!-- <div class="quote-wrapper">
+                        <div class="quotes">
+                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
+                           should have to spend money on boot camp when you can get the MCSE study materials yourself at
+                           a fraction of the camp price. However, who has the willpower to actually sit through a
+                           self-imposed MCSE training.
+                        </div>
+                     </div> -->
+                  </div>
+               </div>
+               <div class="navigation-top">
+                  <div class="d-sm-flex justify-content-between text-center">
+                     <div class="col-sm-4 text-center my-2 my-sm-0">
+                        <!-- <p class="comment-count"><span class="align-middle"><i class="far fa-comment"></i></span> 06 Comments</p> -->
+                     </div>
+                     <ul class="social-icons">
+                        
+                     </ul>
+                  </div>
+                  <div class="navigation-area">
+                     <div class="row">
+                        
+                        <div
+                           class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                           
+                           
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="blog-author">
+                  <div class="media align-items-center">
+                     <img src={{url_for('static', filename="img3/blog/author.png")}} alt="">
+                     <div class="media-body">
+                        <a href="#">
+                           <h4>{{ posts[3] }}</h4>
+                        </a>
+                        <p>{{ posts[4] }}</p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="col-lg-4">
+                  <div class="sidebar_widget">
+                        <div class="single_sidebar_wiget search_form_widget">
+                              <form action="/register" method="GET">
+                                     <div class="p-t-15">
+                            <button  type="submit">Register</button>
+                    
+                              </div>
+                              </form>
+                        </div>
+                        <div class="single_sidebar_wiget">
+                              <div class="sidebar_tittle">
+                              <h3>Categories</h3>
+                              </div>
+                              <div class="single_catagory_item category">
+                              <ul class="list-unstyled">
+                                    <li><a href="#">Culture</a> <span>(15)</span> </li>
+                                    <li><a href="#">Creative Design</a> <span>(15)</span> </li>
+                                    <li><a href="#">Illustration</a> <span>(15)</span> </li>
+                                    <li><a href="#">Production</a> <span>(15)</span> </li>
+                                    <li><a href="#">Mangement</a> <span>(15)</span> </li>
+                                    <li><a href="#">Branding</a> <span>(15)</span> </li>
+                              </ul>
+                              </div>
+                        </div>
+                        <div class="single_sidebar_wiget">
+                              <div class="sidebar_tittle">
+                              <h3>Popular Feeds</h3>
+                              </div>
+                              <div class="single_catagory_post post_2 ">
+                              <div class="category_post_img">
+                                    <img src={{url_for('static', filename="img3/sidebar/sidebar_1.png")}} alt="">
+                              </div>
+                              <div class="post_text_1 pr_30">
+                                    <a href="#">
+                                          <h3>UPcoming Events</h3>
+                                    </a>
+                                    <p><span> By Michal</span> / March 30</p>
+                              </div>
+                              </div>
+                              <div class="single_catagory_post post_2 ">
+                              <div class="category_post_img">
+                                    <img src={{url_for('static', filename="img3/sidebar/sidebar_2.png")}} alt="">
+                              </div>
+                              <div class="post_text_1 pr_30">
+                                    
+                                    <a href="#">
+                                          <h3>UPcoming Events</h3>
+                                    </a>
+                                    <p><span> By Michal</span> / March 30</p>
+                              </div>
+                              </div>
+                             
+                             
+                              </div>
+                        </div>
+                        
+                        <div class="single_sidebar_wiget">
+                              <div class="sidebar_tittle">
+                              <h3>Share this post</h3>
+                              </div>
+                              <div class="social_share_icon tags">
+                              <ul class="list-unstyled">
+                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                    <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                    <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
+                              </ul>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--================Blog Area end =================-->
+
+     <!-- footer part start-->
+	<footer class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-3 col-lg-6 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+					<h4>about us</h4>
+					<p>Heaven fruitful doesn't over the lesser days appear cree ping seasons so behold bea Place likeness female form. Lesser Was green image lights fowl.</p>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+					<h4>Contact Info</h4>
+					<ul>
+						<li><p>Address :Your address goes
+								here, your demo address.</p></li>
+						<li><p>Phone : +8880 44338899</p></li>
+						<li><p>Email : info@colorlib.com</p></li>
+					</ul>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+					<h4>Important Link</h4>
+					<ul>
+					
+						<li><a href="#">Events</a></li>
+						<li><a href="#">My Account</a></li>
+						<li><a href="#">Societies</a></li>
+						<li><a href="#">Our  Main page</a></li>
+					</ul>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+					<h4>Newsletter</h4>
+					<p>Heaven fruitful doesn't over lesser in days. Appear creeping seasons deve behold bearing days open</p>
+					<div class="form-wrap" id="mc_embed_signup">
+						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" required="" type="email">
+							<button class="click-btn btn btn-default text-uppercase"><i class="ti-arrow-right"></i></button>
+							<div style="position: absolute; left: -5000px;">
+								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+							</div>
+
+							<div class="info"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="copyright_text">
+				<div class="row align-items-center">
+					<div class="col-lg-8">
+					
+					</div>
+					<div class="col-lg-4 text-center text-lg-right">
+						<div class="footer-social">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <!-- footer part end-->
+
+      <!-- jquery plugins here-->
+      <script src={{url_for('static', filename="js3/jquery-1.12.1.min.js")}}></script>
+      <!-- popper js -->
+      <script src={{url_for('static', filename="js3/popper.min.js")}}></script>
+      <!-- bootstrap js -->
+      <script src={{url_for('static', filename="js3/bootstrap.min.js")}}></script>
+      <!-- custom js -->
+      <script src={{url_for('static', filename="js3/custom.js")}}></script>
+</body>
+
+</html>
